@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+---
+<footer class="footer footer-center bg-base-200 text-base-content rounded p-10">
+
+  <nav>
+    <div class="grid grid-flow-col gap-4">
+      <a href="https://soundcloud.com/dsuke-d?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing">
+        <Image src="/src/image/SoundCloudLogo_cloudmark.jpg" alt="SoundCloud" width="24" height="24"  class="fill-current"/>
+      </a>
+      <a href="https://open.spotify.com/intl-ja/artist/1BRcYw0zfUhy0gVtE7P5Ki?si=ztdV1jGiQZq8mbCVbekHiw">
+        <Image src="/src/image/Spotify_Icon_CMYK_Black.png" alt="Spotify" width="24" height="24"  class="fill-current"/>
+      </a>
+      <a href="https://music.apple.com/jp/artist/dsuke/1699908161">
+      <Image src="/src/image/Apple_Music_Icon_blk_lg_072420.svg" alt="AppleMusic" width="24" height="24"  class="fill-current"/>
+      <a href="https://youtube.com/@dsukeawks?si=OoLX_TpAEbMG1Dig">
+        <Image src="/src/image/Youtube.svg" alt="Youtube" width="24" height="24"  class="fill-current"/>
+      </a>
+      <a href="https://www.instagram.com/dsuke.records/">
+        <Image src="/src/image/Instagram_Glyph_Black.svg" alt="Instagram" width="24" height="24"  class="fill-current"/>
+  
+      </a>
+    </div>
+  </nav>
+  <aside>
+    <p>Copyright © {new Date().getFullYear()} - All right reserved by Dsuke</p>
+  </aside>
+</footer>

@@ -1,0 +1,105 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fffefb;
+    color: #434343;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    scroll-behavior: smooth;
+  }
+
+  main {
+    display: block;
+    margin-top: 80px; /* ヘッダーの高さ分のマージンを追加 */
+  }
+  section {
+    padding: 60px 20px;
+    margin: 0; /* 上下のマージンのみを適用し、左右のマージンを除去 */
+    /* background-color: #ffffff; */
+    border-radius: 0; /* セクションが横いっぱいに広がるように角を丸めない */
+    box-shadow: none; /* 必要に応じてシャドウを削除 */
+    width: 100%; /* 横幅いっぱいに広げる */
+  }
+
+
+  .section-title {
+    font-size: 2rem; /* 見出しのサイズ */
+    font-weight: bold; /* 見出しを強調 */
+    /* color: #333;  灰色がかった黒色 */
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 50px; /* ラインの長さ */
+    height: 3px; /* ラインの太さ */
+    background-color: #3498db; /* ラインの色 */
+    margin: 0.5rem auto 0;
+  }
+
+  a:hover {
+    color: #3498db;
+    transition: color 0.3s ease;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+
+
+  .wrapper {
+    display: flex;
+    flex-direction: column; /* デフォルトで縦並び */
+    height: auto; 
+  }
+  
+  .column {
+    width: 100%;
+    flex: 1;
+  }
+  
+  .cat1 {
+    /*  background: #fefaf0; クリーム色の背景 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .cat2 {
+    background:no-repeat top center;
+    background-size: cover;
+  }
+
+
+
+
+  @media all and (min-width: 900px) {
+    .wrapper {
+      flex-direction: row; /* 500px以上で横並びに変更 */
+    }
+  
+    .column {
+      width: 50%; /* 各カラムを50%に設定 */
+    }
+  }
+  .soundcloud-embed {
+    max-width: 800px; /* MAX幅を設定 */
+    margin: 0 auto; /* 中央に配置 */
+  }
+  .spotify-embed {
+    max-width: 800px; /* MAX幅を設定 */
+    margin: 0 auto; /* 中央に配置 */
+  }
+  .custom-iframe {
+    width: 100%; /* 親要素の幅に基づいて幅を設定 */
+    height: 166px; /* 必要に応じて高さを設定 */
+    max-width: 100%; /* 親要素の幅を超えないように設定 */
+  }
+  
+  

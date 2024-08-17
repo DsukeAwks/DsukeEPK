@@ -1,0 +1,22 @@
+---
+// src/layouts/BaseLayout.astro
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+const { title } = Astro.props;
+---
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot /> <!-- 各ページのコンテンツがここに挿入されます -->
+    </main>
+    <Footer />
+  </body>
+</html>
