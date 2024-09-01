@@ -15,14 +15,13 @@ body {
     margin-top: 80px; /* ヘッダーの高さ分のマージンを追加 */
   }
   section {
-    padding: 60px 20px;
+    padding: 35px 20px;
     margin: 0; /* 上下のマージンのみを適用し、左右のマージンを除去 */
     /* background-color: #ffffff; */
     border-radius: 0; /* セクションが横いっぱいに広がるように角を丸めない */
     box-shadow: none; /* 必要に応じてシャドウを削除 */
     width: 100%; /* 横幅いっぱいに広げる */
   }
-
 
   .section-title {
     font-size: 2rem; /* 見出しのサイズ */
@@ -50,8 +49,53 @@ body {
     text-decoration: none;
     color: inherit;
   }
+  .newsHead{
+    font-size: 1rem; /* 見出しのサイズ */
+    font-weight: bold; /* 見出しを強調 */
+    /* color: #333;  灰色がかった黒色 */
+    margin-bottom: 0.5rem;
+    position: relative;
+    }
+    .newsHead::after {
+      content: '';
+      display: block;
+      width: 50px; /* ラインの長さ */
+      height: 3px; /* ラインの太さ */
+      background-color: #3498db; /* ラインの色 */
+      margin: 0rem auto 0;
+    }
+.newsTitle{
+  font-size: 1.5rem; /* 見出しのサイズ */
+  font-weight: bold; /* 見出しを強調 */
+  /* color: #333;  灰色がかった黒色 */
+  margin-bottom: 0rem;
+  position: relative;
+  }
+  .blogContent {
+    padding: 60px 20px;
+margin: 0 auto; /* 上下のマージンのみを適用し、左右のマージンを除去 */
+border-radius: 0; /* セクションが横いっぱいに広がるように角を丸めない */
+box-shadow: none; /* 必要に応じてシャドウを削除 */
+width: 60%; /* 横幅いっぱいに広げる */
+text-align:left ;}
+@media (max-width: 768px) {
+.blogContent {
+  max-width: 100%; /* 小さい画面では幅を100%に */
+  padding: 10px;   /* 余白を少し減らす */
+}
+}
+.blogDate {
+font-weight: bold; /* 見出しを強調 */
 
-
+}
+.blogDate::before {
+  content: '';
+  display: block;
+  width: 100%; /* ラインの長さ */
+  height: 1.5px; /* ラインの太さ */
+  background-color: #434343; /* ラインの色 */
+  margin: 0rem auto 0;
+}
 
   .wrapper {
     display: flex;
@@ -64,14 +108,14 @@ body {
     flex: 1;
   }
   
-  .cat1 {
+  .dsukeAbout {
     /*  background: #fefaf0; クリーム色の背景 */
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
   }
-  .cat2 {
+  .dsukeImg {
     background:no-repeat top center;
     background-size: cover;
   }
@@ -101,5 +145,57 @@ body {
     height: 166px; /* 必要に応じて高さを設定 */
     max-width: 100%; /* 親要素の幅を超えないように設定 */
   }
+  
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: light; /* 常にライトモードを使用 */
+    } 
+  }
+  
+  .recent-posts-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    /*  background-color: #f9f9f9; 背景色を設定 */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; /* タイトルを縦に並べる */
+    gap: 10px; /* 各記事間のスペース */
+    text-align: center; /* タイトルを左寄せ */
+  }
+  
+  .recent-post {
+    padding: 0px;
+    border-bottom: 1px solid #e0e0e0; /* 各記事の間にボーダー */
+  }
+  
+
+  
+  .recent-post-link {
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s ease;
+  }
+
+  
+  .recent-post-date {
+    font-size: 0.875rem;
+    color: #888;
+    margin-top: 5px;
+  }
+  @media (max-width: 768px) {
+    .recent-posts {
+      max-width: 100%; /* 小さい画面では幅を100%に */
+      padding: 15px;
+    }
+  
+    .recent-post-link {
+      font-size: 1rem;
+    }
+  }
+ 
+
+
   
   

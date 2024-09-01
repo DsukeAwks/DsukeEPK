@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets';
+import soundCloudIcon from '../image/SoundCloudLogo_cloudmark.jpg';
+import spotifyIcon from '../image/Spotify_Icon_CMYK_Black.png';
+import appleMusicIcon from '../image/Apple_Music_Icon_blk_lg_072420.svg';
+import youtubeIcon from '../image/Youtube.svg';
+import instagramIcon from '../image/Instagram_Glyph_Black.svg';
+import MailIcon from '../image/MailIcon.png';
+---
+<nav>
+    <div class="grid grid-flow-col gap-4">
+     <a href="mailto:awakshi.go@gmail.com" target="_blank" rel="noopener noreferrer">
+        <Image src={MailIcon} alt="Mail" width="24" height="24" class="fill-current"/>
+     </a>  
+      <a href="https://soundcloud.com/dsuke-d?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener noreferrer">
+        <Image src={soundCloudIcon} alt="SoundCloud" width="24" height="24" class="fill-current"/>
+      </a>
+      <a href="https://open.spotify.com/intl-ja/artist/1BRcYw0zfUhy0gVtE7P5Ki?si=ztdV1jGiQZq8mbCVbekHiw" target="_blank" rel="noopener noreferrer">
+        <Image src={spotifyIcon} alt="Spotify" width="24" height="24" class="fill-current"/>
+      </a>
+      <a href="https://music.apple.com/jp/artist/dsuke/1699908161" target="_blank" rel="noopener noreferrer">
+        <Image src={appleMusicIcon} alt="AppleMusic" width="24" height="24" class="fill-current"/>
+      </a>
+      <a href="https://youtube.com/@dsukeawks?si=OoLX_TpAEbMG1Dig" target="_blank" rel="noopener noreferrer">
+        <Image src={youtubeIcon} alt="Youtube" width="24" height="24" class="fill-current"/>
+      </a>
+      <a href="https://www.instagram.com/dsuke.records/" target="_blank" rel="noopener noreferrer">
+        <Image src={instagramIcon} alt="Instagram" width="24" height="24" class="fill-current"/>
+      </a>
+    </div>
+  </nav>

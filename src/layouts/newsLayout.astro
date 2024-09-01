@@ -1,23 +1,31 @@
 ---
-// src/layouts/BaseLayout.astro
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
-const { title } = Astro.props;
+// const { title } = Astro.props;
+const { frontmatter } = Astro.props;
 ---
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
+    <title>{frontmatter.title}</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
   </head>
   <body>
     <Header />
     <main>
+      <h2 class="newsHead"><a href="/news/all">News</a></h2>
+      <div class="blogContent">
+      <h3 class="newsTitle">{frontmatter.title}</h3>
+      <p class="blogDate"><font size="2">{frontmatter.pubDate}</font></p>
+      <br>
       <slot /> <!-- 各ページのコンテンツがここに挿入されます -->
+      <div/>
     </main>
+    <div style="padding: 20px;">
+      <button class="btn" onclick="history.back()" >Back</button>
+      </div>
     <Footer />
   </body>
 </html>

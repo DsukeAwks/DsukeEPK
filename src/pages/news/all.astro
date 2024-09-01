@@ -1,0 +1,20 @@
+---
+import '../../styles/global.css';
+import Layout from '../../layouts/testLayout.astro';
+const allPosts = await Astro.glob('../news/posts/*.md');
+const pageTitle = "AllNews";
+---
+<Layout title={pageTitle}>
+  <h2 class="newsHead">News</h2>
+  <div class="recent-posts-container">
+  <ul>
+    {allPosts.map(post => (
+    <div class="recent-post">
+    <li><a href={post.url}>{post.frontmatter.title}</a></li>
+  </div>))}
+  </ul>
+</div>
+<div style="padding: 20px;">
+<button class="btn" onclick="history.back()" >Back</button>
+</div>
+</Layout>
