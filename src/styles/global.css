@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family:"Noto Serif JP","Sawarabi Mincho",'Hiragino Mincho ProN', 'Roboto', sans-serif;
     background-color: #fffefb;
     color: #434343;
     margin: 0;
@@ -22,7 +22,44 @@ body {
     box-shadow: none; /* 必要に応じてシャドウを削除 */
     width: 100%; /* 横幅いっぱいに広げる */
   }
+  img.DsukeLogo{
+    width: 90px;
+    height: 90px;
+    top: 0;
+  bottom: 0;
+  margin: auto 0;
+  position: absolute;
+  }
+  @media (max-width: 450px) {
+    img.DsukeLogo{
+      bottom: 3px;
+      width: 70px;
+      height: 70px;
+  }
+  @media (max-width: 370px) {
+    img.DsukeLogo{
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+  
 
+  .section-maintitle {
+    font-size: 1rem; /* 見出しのサイズ */
+    font-weight: bold; /* 見出しを強調 */
+    /* color: #333;  灰色がかった黒色 */
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  .section-maintitle::after{
+  content: '';
+  display: block;
+  width: 25px; /* ラインの長さ */
+  height: 2px; /* ラインの太さ */
+  background-color: #3498db; /* ラインの色 */
+  margin: 0.5rem auto 0;
+}
   .section-title {
     font-size: 2rem; /* 見出しのサイズ */
     font-weight: bold; /* 見出しを強調 */
@@ -49,6 +86,11 @@ body {
     text-decoration: none;
     color: inherit;
   }
+  Dsukeflex{
+    width: 50;
+    height: 50;
+  }
+
   .newsHead{
     font-size: 1rem; /* 見出しのサイズ */
     font-weight: bold; /* 見出しを強調 */

@@ -1,6 +1,7 @@
 ---
 // src/pages/index.astro
 import Layout from '../layouts/testLayout.astro';
+import DsukeLogo from '../image/DsukeロゴFullName.svg';
 import '../styles/global.css';
 import { Image } from 'astro:assets';
 import myImage from "../image/Dsuke icon.png";
@@ -13,6 +14,12 @@ const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).getTime
 const recentPosts = sortedPosts.slice(0, Math.min(sortedPosts.length, 5));
 ---
 <Layout title="Dsuke">
+  <section id="dsuke">
+    <div class="DsukeLogo">
+      <Image src={DsukeLogo} alt="DsukeLogo" width="300" height="300" style="display: block; margin: auto;"/>
+      </div>
+  </section>
+
   <section id="about"> 
     <div class="wrapper">
       <div class="column dsukeImg rounded-lg shadow-2xl">
@@ -74,13 +81,6 @@ Inspired by a wide range of genres such as instrumental, rock, electro, and danc
 <Slider />
 
 </section>
-
-
-
-
-
-
-
 
 
   <section id="contact">

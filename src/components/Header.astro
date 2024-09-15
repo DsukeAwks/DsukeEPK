@@ -3,7 +3,7 @@
 import '../styles/global.css';
 import Nav from '../components/nav.astro';
 import { ViewTransitions } from 'astro:transitions';
-
+import DsukeLogo from '../image/DsukeロゴFullName.svg';
 ---
 <ViewTransitions />
 <header class="fixed top-0 left-0 w-full shadow-sm z-50 bg-base-200 text-base-content">
@@ -30,14 +30,17 @@ import { ViewTransitions } from 'astro:transitions';
           class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
           <li><a href="/#about">About &quot;Dsuke&quot;</a></li>
           <li><a href="/news/all">News</a></li>
-          <li><a href="/#works">Wokrs</a></li>
+          <li><a href="/#works">Works</a></li>
           <li><a href="/#contact">Contact/SNS</a></li>
         </ul>
       </div>
       <h1 class="btn btn-ghost text-xl">
-        <a href="#">Dsuke
+        
+        <a href="#">
+        <img src={DsukeLogo.src} alt="Dsuke"  class="DsukeLogo"/>
         </a>
       </h1>
+    
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
@@ -51,4 +54,5 @@ import { ViewTransitions } from 'astro:transitions';
     <Nav />
   </div>
 </nav>
+
 </header>
